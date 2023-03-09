@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+  max-width: 1100px;
+  margin: auto;
+}
+body .menu-button {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header #menu-close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 1.25rem;
+  z-index: 99999;
+  cursor: pointer;
+}
+.header nav {
+  opacity: 0;
+  z-index: -999;
+  transition: all 0.3s ease-in-out;
+}
+.header nav.open {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 75vw;
+  background-color: var(--white);
+  padding: 1.25rem;
+  opacity: 1;
+  z-index: 999999999;
+}
+.header nav.open ul {
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header nav.open ul li {
+  margin: 1.5rem 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation .menu-button button {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-picture {
+  background: var(--white);
+}
+.mobile-picture img {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-picture h1 {
+  font-size: 2rem;
+}
+.mobile-picture button {
+  width: 200px;
+  height: 50px;
+  background-color: var(--Soft-red);
+  border: none;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.mobile-picture button:hover {
+  background-color: var(--Very-dark-blue);
+  color: var(--white);
+}
+.mobile-picture p {
+  display: flex;
+  flex-direction: column;
+  color: var(--Dark-grayish-blue);
+  gap: 25px;
+  padding: 10px 0 35px 0;
+  line-height: 1.8;
+}
+
+.articles {
+  width: auto;
+  background-color: var(--Very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
+.articles h2 {
+  color: var(--Soft-orange);
+  font-size: 30px;
+}
+.articles p {
+  color: var(--Dark-grayish-blue);
+  line-height: 1.8;
+}
+.articles span {
+  display: flex;
+  color: var(--white);
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.articles span:hover {
+  color: var(--Soft-orange);
+  cursor: pointer;
+}
+.articles .border {
+  border-bottom: solid var(--Dark-grayish-blue);
+  padding: 1em 0;
+}
+
+.cards {
+  background-color: var(--white);
+  padding-top: 50px;
+}
+.cards .picture-one {
+  display: flex;
+  width: auto;
+  height: 200px;
+  background-color: var(--white);
+}
+.cards .picture-one img {
+  width: 150px;
+  height: 160px;
+}
+.cards .card-number {
+  padding: 0 0 0 15px;
+}
+.cards .card-number span {
+  font-size: 40px;
+  color: var(--Grayish-blue);
+  font-weight: 700;
+}
+.cards .card-number h4, .cards .card-number p {
+  line-height: 1.8;
+}
+
+@media (min-width: 775px) {
+  body {
+    max-width: auto;
+    margin: auto;
+  }
+  .mobile-picture section {
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+  }
+  .visuel {
+    display: flex;
+    gap: 30px;
+  }
+  .navigation {
+    padding: 0 0 30px 0;
+  }
+  .navigation .menu-button {
+    display: none;
+    z-index: 9999;
+  }
+  .cards {
+    display: flex;
+    gap: 20xp;
+  }
+  .header nav {
+    opacity: 1;
+    z-index: auto;
+  }
+  .header nav #menu-close {
+    display: none;
+  }
+  .header nav .open {
+    position: relative;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    z-index: auto;
+  }
+  .header nav .open ul {
+    position: relative;
+    top: 0;
+    transform: translateY(0%);
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+  .header nav .open ul li {
+    margin: 0;
+  }
+  .header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    margin-bottom: 15px;
+  }
+  .header nav ul li:hover {
+    color: var(--Soft-orange);
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=style.css.map */
